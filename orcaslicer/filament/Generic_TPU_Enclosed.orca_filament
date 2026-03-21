@@ -1,0 +1,10 @@
+; OrcaSlicer Filament preset
+; Material: Generic TPU
+; Enclosed baseline
+nozzle_temperature_first_layer=230
+nozzle_temperature=225
+bed_temperature_first_layer=50
+bed_temperature=45
+fan_speed_first_layer=20
+fan_speed=35
+max_volumetric_speed=6

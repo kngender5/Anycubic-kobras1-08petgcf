@@ -1,0 +1,16 @@
+; OrcaSlicer Process preset
+layer_height=0.20
+first_layer_height=0.20
+external_perimeter_speed=39
+perimeter_speed=58
+infill_speed=105
+top_surface_speed=39
+first_layer_speed=21
+external_perimeter_line_width=0.42
+perimeter_line_width=0.45
+infill_line_width=0.48
+top_surface_line_width=0.45
+bottom_surface_line_width=0.45
+retraction_length=0.8
+retraction_speed=30
+z_hop=0.2

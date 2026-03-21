@@ -1,0 +1,10 @@
+; OrcaSlicer Filament preset
+; Material: Generic PETG
+; Enclosed baseline
+nozzle_temperature_first_layer=245
+nozzle_temperature=240
+bed_temperature_first_layer=80
+bed_temperature=75
+fan_speed_first_layer=0
+fan_speed=30
+max_volumetric_speed=10
