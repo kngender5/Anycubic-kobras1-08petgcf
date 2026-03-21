@@ -1,9 +1,9 @@
 # Anycubic Kobra S1 OrcaSlicer Profiles
 
-Included profile sets:
+Included profile sets (existing + newly added):
 
-- Nozzle sizes: `0.2`, `0.4`, `0.6`, `0.8`
-- Filaments: `PLA`, `TPU`, `PETG`, `PLA+`, `CR-PLA`, `PETG-CF`
+- Nozzle sizes: `0.2`, `0.4`, `0.6`, plus existing `0.8` PETG-CF baseline
+- Filaments: `PLA`, `TPU`, `PETG`, `PLA+`, `CR-PLA`, plus existing `PETG-CF` baseline
 
 Profile locations:
 
