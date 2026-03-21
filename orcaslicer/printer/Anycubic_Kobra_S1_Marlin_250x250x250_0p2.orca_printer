@@ -1,11 +1,50 @@
 ; OrcaSlicer Printer file
 ; 3D printer configuration for Anycubic Kobra S1
 ; Size: 250x250x250
+; Nozzle: 0.2 mm brass
+
+; === Printer identification ===
 printer_model=Anycubic Kobra S1
 gcode_flavor=marlin
+printer_technology=FFF
+machine_type=CoreXY
+
+; === Build volume ===
 bed_shape=0x0,250x0,250x250,0x250
 max_print_height=250
+bed_type=Textured PEI
+max_bed_temperature=110
+
+; === Nozzle and filament ===
 nozzle_diameter=0.2
+nozzle_type=brass
+max_print_temperature=280
 filament_diameter=1.75
+
+; === Layer height limits for 0.2 mm nozzle ===
+min_layer_height=0.05
+max_layer_height=0.15
+
+; === Machine movement limits (Marlin firmware) ===
+machine_max_feedrate_x=500
+machine_max_feedrate_y=500
+machine_max_feedrate_z=10
+machine_max_feedrate_e=120
+machine_max_acceleration_x=20000
+machine_max_acceleration_y=20000
+machine_max_acceleration_z=500
+machine_max_acceleration_e=5000
+machine_max_jerk_x=20
+machine_max_jerk_y=20
+machine_max_jerk_z=0.4
+machine_max_jerk_e=5.0
+
+; === Travel speeds ===
+travel_speed=200
+travel_speed_z=10
+
+; === Retraction defaults ===
 retraction_length=0.8
-retraction_speed=30
+retraction_speed=35
+retraction_minimum_travel=1.5
+retract_before_travel=2.0

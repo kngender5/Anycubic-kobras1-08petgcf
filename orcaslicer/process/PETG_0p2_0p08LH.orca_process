@@ -1,16 +1,77 @@
 ; OrcaSlicer Process preset
+; PETG — 0.2 mm nozzle, 0.08 mm layer height (fine detail)
+
+; === Layer heights ===
 layer_height=0.08
 first_layer_height=0.10
+
+; === Shell / wall counts ===
+perimeters=3
+top_solid_layers=6
+bottom_solid_layers=5
+top_solid_min_thickness=0.5
+bottom_solid_min_thickness=0.4
+
+; === Infill ===
+fill_density=15
+fill_pattern=grid
+
+; === Speeds (mm/s) ===
 external_perimeter_speed=25
 perimeter_speed=35
 infill_speed=55
 top_surface_speed=25
 first_layer_speed=16
+bridge_speed=18
+
+; === Line widths (mm) ===
 external_perimeter_line_width=0.22
 perimeter_line_width=0.24
 infill_line_width=0.24
 top_surface_line_width=0.24
 bottom_surface_line_width=0.24
+
+; === Bridge settings ===
+; PETG bridges well with less cooling; slight under-extrusion helps
+bridge_flow_ratio=0.90
+bridge_fan_speed=50
+
+; === Overhang speeds (mm/s) — graduated by overhang severity ===
+overhang_1_4_speed=0
+overhang_2_4_speed=20
+overhang_3_4_speed=14
+overhang_4_4_speed=12
+
+; === Support (disabled by default) ===
+support_material=0
+support_material_threshold=45
+support_material_contact_distance=0.25
+support_material_spacing=2.5
+
+; === Seam ===
+seam_position=aligned
+
+; === Acceleration (mm/s²) ===
+default_acceleration=3000
+outer_wall_acceleration=1500
+inner_wall_acceleration=2500
+infill_acceleration=5000
+travel_acceleration=8000
+initial_layer_acceleration=1000
+bridge_acceleration=1500
+
+; === Jerk (mm/s) ===
+outer_wall_jerk=6
+inner_wall_jerk=7
+infill_jerk=7
+travel_jerk=10
+initial_layer_jerk=4
+
+; === Retraction ===
 retraction_length=0.8
 retraction_speed=30
 z_hop=0.2
+
+; === Cooling / slow-down ===
+slow_down_layer_time=12
+slow_down_min_speed=12

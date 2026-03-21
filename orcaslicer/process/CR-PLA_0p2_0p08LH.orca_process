@@ -1,16 +1,76 @@
 ; OrcaSlicer Process preset
+; CR-PLA — 0.2 mm nozzle, 0.08 mm layer height (fine detail)
+
+; === Layer heights ===
 layer_height=0.08
 first_layer_height=0.10
+
+; === Shell / wall counts ===
+perimeters=3
+top_solid_layers=6
+bottom_solid_layers=5
+top_solid_min_thickness=0.5
+bottom_solid_min_thickness=0.4
+
+; === Infill ===
+fill_density=15
+fill_pattern=grid
+
+; === Speeds (mm/s) ===
 external_perimeter_speed=33
 perimeter_speed=48
 infill_speed=75
 top_surface_speed=33
 first_layer_speed=19
+bridge_speed=15
+
+; === Line widths (mm) ===
 external_perimeter_line_width=0.22
 perimeter_line_width=0.24
 infill_line_width=0.24
 top_surface_line_width=0.24
 bottom_surface_line_width=0.24
+
+; === Bridge settings ===
+bridge_flow_ratio=0.85
+bridge_fan_speed=100
+
+; === Overhang speeds (mm/s) — graduated by overhang severity ===
+overhang_1_4_speed=0
+overhang_2_4_speed=25
+overhang_3_4_speed=18
+overhang_4_4_speed=15
+
+; === Support (disabled by default) ===
+support_material=0
+support_material_threshold=45
+support_material_contact_distance=0.2
+support_material_spacing=2.5
+
+; === Seam ===
+seam_position=aligned
+
+; === Acceleration (mm/s²) ===
+default_acceleration=5000
+outer_wall_acceleration=2500
+inner_wall_acceleration=4000
+infill_acceleration=8000
+travel_acceleration=10000
+initial_layer_acceleration=1500
+bridge_acceleration=2000
+
+; === Jerk (mm/s) ===
+outer_wall_jerk=8
+inner_wall_jerk=9
+infill_jerk=9
+travel_jerk=12
+initial_layer_jerk=5
+
+; === Retraction ===
 retraction_length=0.8
-retraction_speed=30
+retraction_speed=35
 z_hop=0.2
+
+; === Cooling / slow-down ===
+slow_down_layer_time=10
+slow_down_min_speed=15
