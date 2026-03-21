@@ -1,0 +1,10 @@
+; OrcaSlicer Filament preset
+; Material: Creality CR-PLA
+; Enclosed baseline
+nozzle_temperature_first_layer=215
+nozzle_temperature=210
+bed_temperature_first_layer=60
+bed_temperature=55
+fan_speed_first_layer=30
+fan_speed=100
+max_volumetric_speed=12

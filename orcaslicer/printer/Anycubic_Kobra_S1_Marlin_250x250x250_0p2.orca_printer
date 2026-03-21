@@ -1,0 +1,11 @@
+; OrcaSlicer Printer file
+; 3D printer configuration for Anycubic Kobra S1
+; Size: 250x250x250
+printer_model=Anycubic Kobra S1
+gcode_flavor=marlin
+bed_shape=0x0,250x0,250x250,0x250
+max_print_height=250
+nozzle_diameter=0.2
+filament_diameter=1.75
+retraction_length=0.8
+retraction_speed=30
