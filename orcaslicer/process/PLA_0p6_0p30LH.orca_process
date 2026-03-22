@@ -1,16 +1,76 @@
 ; OrcaSlicer Process preset
+; PLA — 0.6 mm nozzle, 0.30 mm layer height (draft / fast)
+
+; === Layer heights ===
 layer_height=0.30
 first_layer_height=0.30
+
+; === Shell / wall counts ===
+perimeters=3
+top_solid_layers=4
+bottom_solid_layers=3
+top_solid_min_thickness=1.2
+bottom_solid_min_thickness=0.9
+
+; === Infill ===
+fill_density=15
+fill_pattern=grid
+
+; === Speeds (mm/s) ===
 external_perimeter_speed=35
 perimeter_speed=50
 infill_speed=90
 top_surface_speed=35
 first_layer_speed=20
+bridge_speed=22
+
+; === Line widths (mm) ===
 external_perimeter_line_width=0.62
 perimeter_line_width=0.66
 infill_line_width=0.72
 top_surface_line_width=0.66
 bottom_surface_line_width=0.66
+
+; === Bridge settings ===
+bridge_flow_ratio=0.85
+bridge_fan_speed=100
+
+; === Overhang speeds (mm/s) — graduated by overhang severity ===
+overhang_1_4_speed=0
+overhang_2_4_speed=26
+overhang_3_4_speed=18
+overhang_4_4_speed=15
+
+; === Support (disabled by default) ===
+support_material=0
+support_material_threshold=45
+support_material_contact_distance=0.2
+support_material_spacing=2.5
+
+; === Seam ===
+seam_position=aligned
+
+; === Acceleration (mm/s²) ===
+default_acceleration=6000
+outer_wall_acceleration=3000
+inner_wall_acceleration=5000
+infill_acceleration=10000
+travel_acceleration=12000
+initial_layer_acceleration=1800
+bridge_acceleration=2500
+
+; === Jerk (mm/s) ===
+outer_wall_jerk=8
+inner_wall_jerk=9
+infill_jerk=9
+travel_jerk=12
+initial_layer_jerk=5
+
+; === Retraction ===
 retraction_length=0.8
-retraction_speed=30
+retraction_speed=35
 z_hop=0.2
+
+; === Cooling / slow-down ===
+slow_down_layer_time=7
+slow_down_min_speed=18

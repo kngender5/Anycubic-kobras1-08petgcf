@@ -1,10 +1,37 @@
 ; OrcaSlicer Filament preset
 ; Material: Generic PLA+
 ; Enclosed baseline
+
+; === Material properties ===
+filament_type=PLA
+filament_density=1.24
+filament_cost=24
+filament_flow_ratio=1.0
+
+; === Nozzle temperatures ===
 nozzle_temperature_first_layer=220
 nozzle_temperature=215
+min_print_temp=200
+max_print_temp=235
+
+; === Bed temperatures ===
 bed_temperature_first_layer=60
 bed_temperature=55
+min_bed_temp=50
+max_bed_temp=70
+
+; === Cooling — fan speeds ===
 fan_speed_first_layer=30
 fan_speed=100
+fan_min_speed=20
+fan_max_speed=100
+bridge_fan_speed=100
+overhang_fan_speed=100
+
+; === Cooling — timing and slow-down ===
+fan_cooling_layer_time=7
+slow_down_layer_time=10
+slow_down_min_speed=20
+
+; === Volumetric flow limit ===
 max_volumetric_speed=12

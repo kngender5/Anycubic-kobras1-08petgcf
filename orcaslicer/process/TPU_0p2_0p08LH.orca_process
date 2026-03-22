@@ -1,16 +1,78 @@
 ; OrcaSlicer Process preset
+; TPU — 0.2 mm nozzle, 0.08 mm layer height (fine detail)
+; Flexible material — low speeds and minimal retraction are essential
+
+; === Layer heights ===
 layer_height=0.08
 first_layer_height=0.10
+
+; === Shell / wall counts ===
+perimeters=3
+top_solid_layers=5
+bottom_solid_layers=4
+top_solid_min_thickness=0.4
+bottom_solid_min_thickness=0.32
+
+; === Infill ===
+fill_density=10
+fill_pattern=grid
+
+; === Speeds (mm/s) ===
 external_perimeter_speed=18
 perimeter_speed=22
 infill_speed=28
 top_surface_speed=18
 first_layer_speed=12
+bridge_speed=12
+
+; === Line widths (mm) ===
 external_perimeter_line_width=0.22
 perimeter_line_width=0.24
 infill_line_width=0.24
 top_surface_line_width=0.24
 bottom_surface_line_width=0.24
+
+; === Bridge settings ===
+bridge_flow_ratio=0.95
+bridge_fan_speed=40
+
+; === Overhang speeds (mm/s) — graduated by overhang severity ===
+overhang_1_4_speed=0
+overhang_2_4_speed=15
+overhang_3_4_speed=12
+overhang_4_4_speed=10
+
+; === Support (disabled by default) ===
+support_material=0
+support_material_threshold=45
+support_material_contact_distance=0.20
+support_material_spacing=2.5
+
+; === Seam ===
+seam_position=aligned
+
+; === Acceleration (mm/s²) ===
+default_acceleration=1000
+outer_wall_acceleration=600
+inner_wall_acceleration=800
+infill_acceleration=1500
+travel_acceleration=2000
+initial_layer_acceleration=500
+bridge_acceleration=700
+
+; === Jerk (mm/s) ===
+outer_wall_jerk=3
+inner_wall_jerk=3
+infill_jerk=4
+travel_jerk=5
+initial_layer_jerk=2
+
+; === Retraction ===
+; Minimal retraction prevents TPU from buckling in the extruder path
 retraction_length=0.8
-retraction_speed=30
+retraction_speed=25
 z_hop=0.2
+
+; === Cooling / slow-down ===
+slow_down_layer_time=15
+slow_down_min_speed=8
