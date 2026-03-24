@@ -1,0 +1,57 @@
+; OrcaSlicer Printer file
+; 3D printer configuration for Anycubic Kobra S1 — Klipper firmware
+; Size: 250x250x250
+; Nozzle: 0.8 mm hardened steel (for abrasive filaments such as PETG-CF)
+
+; === Printer identification ===
+printer_model=Anycubic Kobra S1
+gcode_flavor=klipper
+printer_technology=FFF
+machine_type=CoreXY
+
+; === Build volume ===
+bed_shape=0x0,250x0,250x250,0x250
+max_print_height=250
+bed_type=Textured PEI
+max_bed_temperature=110
+
+; === Nozzle and filament ===
+nozzle_diameter=0.8
+nozzle_type=hardened_steel
+max_print_temperature=300
+filament_diameter=1.75
+
+; === Layer height limits for 0.8 mm nozzle ===
+min_layer_height=0.10
+max_layer_height=0.60
+
+; === Machine movement limits (Klipper firmware) ===
+machine_max_feedrate_x=500
+machine_max_feedrate_y=500
+machine_max_feedrate_z=10
+machine_max_feedrate_e=120
+machine_max_acceleration_x=10000
+machine_max_acceleration_y=10000
+machine_max_acceleration_z=500
+machine_max_acceleration_e=5000
+machine_max_jerk_x=20
+machine_max_jerk_y=20
+machine_max_jerk_z=0.4
+machine_max_jerk_e=5.0
+
+; === Travel speeds ===
+travel_speed=200
+travel_speed_z=10
+
+; === Retraction defaults ===
+retraction_length=0.5
+retraction_speed=30
+retraction_minimum_travel=1.5
+retract_before_travel=2.0
+
+; === Klipper start / end G-code ===
+; OrcaSlicer passes bed and nozzle temps as named parameters.
+machine_start_gcode=PRINT_START BED=[bed_temperature_initial_layer_single] EXTRUDER=[nozzle_temperature_initial_layer]
+machine_end_gcode=PRINT_END
+machine_pause_gcode=PAUSE
+machine_resume_gcode=RESUME
