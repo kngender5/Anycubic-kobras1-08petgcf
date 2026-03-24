@@ -144,7 +144,7 @@ for your board. Common values to update:
 | `serial:` under `[mcu]` | Run `ls /dev/serial/by-id/` on the Pi and paste the path |
 | `x_offset` / `y_offset` under `[bltouch]` | Measure the probe-to-nozzle offset with a ruler |
 | `z_offset` under `[bltouch]` | Perform the paper-test calibration and run `SAVE_CONFIG` |
-| `rotation_distance` under `[extruder]` | Calibrate e-steps; see [Klipper rotation_distance guide](https://www.klipper3d.org/Rotation_Distance.html) |
+| `rotation_distance` under `[extruder]` | Calibrate `rotation_distance`; see [Klipper rotation_distance guide](https://www.klipper3d.org/Rotation_Distance.html) |
 | `pid_kp/ki/kd` | Run `PID_CALIBRATE HEATER=extruder TARGET=220` then `SAVE_CONFIG` |
 
 #### Step 4 — Check the configuration
